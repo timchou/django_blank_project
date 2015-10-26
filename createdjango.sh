@@ -44,15 +44,15 @@ SECRET=`cat /dev/urandom | env LC_CTYPE=C tr -cd 'a-f0-9' | head -c 32`
 sed -i '' s/SECRET_KEY=\'\'/SECRET_KEY=\'$SECRET\'/ $DEST_DIR/$DEST_NAME.server/$DEST_NAME/settings.py
 
 
-source $DEST_DIR/bin/activate
-cd $DEST_DIR/$DEST_NAME.server/
 
 echo "done!"
 echo "then you should :"
-echo "1.run :   pip install -r requirements.txt"
-echo "2.create database $DEST_NAME in mysql"
-echo "3.run :   python manage.py makemigrations users"
-echo "4.run :   python manage.py migrate users"
-echo "5.run :   python manage.py migrate"
+echo "0.create database $DEST_NAME in mysql"
+echo "1.run :   source $DEST_DIR/bin/activate"
+echo "2.run :   cd $DEST_DIR/$DEST_NAME.server/"
+echo "3.run :   pip install -r requirements.txt"
+echo "4.run :   python manage.py makemigrations users"
+echo "5.run :   python manage.py migrate users"
+echo "6.run :   python manage.py migrate"
 
 

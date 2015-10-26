@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import hashlib , os
 import time,datetime,random,string,collections,httplib,urllib
-from BeautifulSoup import BeautifulSoup
 import xml.etree.ElementTree as ET
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.cache import cache
@@ -11,13 +10,8 @@ from django.db import transaction
 from django.conf import settings
 from django.contrib.auth.models import User
 from apps.users.models import UserProfile
-from apps.articles.models import Article,WeiboUserRet
-from apps.feeds.models import Feed
 import collections
-from readability.readability import Document
-from weibo import APIClient,APIError
 from django.db import IntegrityError
-from lxml.etree import XMLSyntaxError
 from djangoexample.settings import log_comm as logger
 
 def myencode(s):
