@@ -1,0 +1,8 @@
+MySQL-Python
+django
+celery
+django-crontab
+django-redis
+django-rest-swagger
+requests
+supervisor
