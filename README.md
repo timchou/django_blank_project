@@ -6,4 +6,5 @@ Blank Django project framework I used to use,including:
 usage:
 
 1.modify createdjango.sh
+  
 2.run: sh createdjango.sh
