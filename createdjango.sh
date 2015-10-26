@@ -1,12 +1,12 @@
 #!/bin/bash          
 
 #源目录
-EXAMPLE_DIR='/u01/www/django.example'
+EXAMPLE_DIR='/u01/www/django_blank_project/django.project'
 #源项目名
 EXAMPLE_NAME='djangoexample'
 
 #目的项目目录
-DEST_DIR='/u01/www/test'
+DEST_DIR='/u01/www/cloud'
 #目的项目名
 DEST_NAME='cloud'
 
@@ -44,7 +44,7 @@ SECRET=`cat /dev/urandom | env LC_CTYPE=C tr -cd 'a-f0-9' | head -c 32`
 sed -i '' s/SECRET_KEY=\'\'/SECRET_KEY=\'$SECRET\'/ $DEST_DIR/$DEST_NAME.server/$DEST_NAME/settings.py
 
 
-source $DEST_DIR/bin/active
+source $DEST_DIR/bin/activate
 cd $DEST_DIR/$DEST_NAME.server/
 
 echo "done!"

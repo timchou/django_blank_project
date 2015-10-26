@@ -3,8 +3,10 @@ Blank Django project framework I used to use,including:
 - celery
 - basic UserProfile model
 
-usage:
-
-1.modify createdjango.sh
+require:  
+1.virtualenv  
   
-2.run: sh createdjango.sh
+usage:  
+1.modify createdjango.sh   
+2.run: sh createdjango.sh  
+3.follow command infomation
